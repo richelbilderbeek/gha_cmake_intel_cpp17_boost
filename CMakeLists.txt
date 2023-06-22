@@ -15,6 +15,8 @@ if(DEFINED ENV{CLUSTER})
   set(CMAKE_CXX_COMPILER "/sw/comp/intel/oneapi/compiler/2023.1.0/linux/bin/icpx")
 else()
   message("Not working on a cluster." )
+  set(CMAKE_C_COMPILER "/opt/intel/oneapi/compiler/2023.1.0/linux/bin/icx")
+  set(CMAKE_CXX_COMPILER "/opt/intel/oneapi/compiler/2023.1.0/linux/bin/icpx")
 endif()
 
 # Show compiler info
