@@ -78,7 +78,8 @@ int main()
   #endif
 
   #ifdef __clang__
-  #error No clang in this example please
+  // Will warn on the Rackham cluster
+  #warning No clang in this example please
   #endif
 
   if(f() != 1) return 1; // No assert, 'f' should not be optimized away
