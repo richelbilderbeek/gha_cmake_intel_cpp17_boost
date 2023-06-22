@@ -24,6 +24,15 @@ jobs:
       - name: g++ must be removed. It is :-)
         run: g++ --version || true
 
+      - name: Remove llvm
+        run: sudo apt-get remove llvm llvm-*
+
+      - name: Remove clang
+        run: sudo apt-get remove clang clang-*
+
+      - name: clang++ must be removed. It is :-)
+        run: clang++ --version || true
+
       - name: Add intel repo to apt
         run: |
           wget https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
