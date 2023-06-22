@@ -53,7 +53,7 @@ jobs:
         run: ./scripts/build.sh
 
       - name: Run the program
-        run: ./build/gha_cmake_gcc_cpp17_boost
+        run: ./build/gha_cmake_intel_cpp17_boost
 
 
 
