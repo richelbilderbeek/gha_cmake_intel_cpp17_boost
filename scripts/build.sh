@@ -14,6 +14,13 @@ if [[ ! "${PWD}" =~ ^.*gha_cmake_intel_cpp17_boost$ ]]; then
   exit 42
 fi
 
+if [[ ! -z "${CLUSTER}" ]]; then
+  echo "Working on a cluster, great!"
+else
+  echo "Not working on a cluster, sourcing a file"
+  source /opt/intel/oneapi/setvars.sh
+fi
+
 cmake -S . -B build
 cmake --build build
 ./build/gha_cmake_intel_cpp17_boost
